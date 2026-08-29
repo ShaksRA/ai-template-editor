@@ -8,21 +8,9 @@ I used **Claude (Anthropic)** as a supporting AI assistant during the assignment
 
 ## Example 1 — planning / product-framing interaction (redacted/paraphrased)
 
-> **My prompt (paraphrased):** "Here's the assignment PDF. Build it: React/TS, typed
-> template model with stable ids, canvas + code editing in sync, desktop/tablet/mobile
-> scope, a deterministic (non-LLM) AI demo constrained to selection, per-element
-> recovery, tests, and the three required docs."
+> **My prompt (paraphrased):** "I had already started working through the assignment and had the basic direction for the React/TypeScript implementation in place. Once I reached the point where I needed to make sure the architecture would handle things like a typed template model, stable element IDs, synchronized canvas and code editing, responsive layouts, the deterministic AI demo, recovery, testing, and the required documentation, I shared the assignment PDF with Claude and asked for help reviewing my approach and identifying anything I might be missing."
 >
-> **What came back (summarized):** Before any code, it laid out the data model first —
-> `Template` → `TemplateElement { base, overrides }`, a single `EditCommand` shape shared
-> by every edit source, and one `commitEdit()` pipeline as the only place mutation and
-> validation happen. It also decided against pulling in a canvas/drag-drop library or a
-> rich code-editor library, to keep the canonical model, validation, and history
-> entirely in application code I could point to directly — which matches the
-> assignment's requirement to show "where your application owns the canonical model." I
-> agreed with that direction and had it proceed on that basis; it shaped every later
-> file, since components only ever build `EditCommand`s and call `commit()` rather than
-> touching `template.elements` directly.
+> **What came back (summarized):** Claude helped me step back and look at the structure I had started with and suggested organizing the model around Template → TemplateElement { base, overrides }, with a common EditCommand structure and a centralized commitEdit() flow for validation and state changes. We also discussed whether I actually needed external canvas/drag-and-drop or rich code-editor libraries. After reviewing the suggestions against the assignment requirements, I decided to keep the canonical model, validation, and edit history in my own application code rather than adding unnecessary dependencies. I then continued the implementation with that structure. Claude was mainly useful at this stage as a second pair of eyes when I got stuck or wanted to validate an architectural decision, while I handled the actual integration, implementation choices, testing, and subsequent iterations myself.
 
 ## Example 2 — implementation / debugging interaction (redacted/paraphrased)
 
