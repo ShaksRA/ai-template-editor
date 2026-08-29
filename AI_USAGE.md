@@ -2,7 +2,8 @@
 
 ## Tools/models used
 
-For this assignment, I mainly used **Claude (Anthropic)** as an AI coding assistant whenever I needed help. I worked with it in an agentic chat setup, where I could provide the assignment PDF, review the output, and give it additional instructions or corrections based on what I wanted. I used Claude at different stages of the task, including planning the data model, developing the components and core logic, creating and running tests, and preparing the three required documents. I didn’t simply rely on its output—I reviewed the code and documentation myself and made the necessary changes before considering the work complete. I did not use any other AI coding or code-review tools, such as GitHub Copilot or a separate review model.
+I used **Claude (Anthropic)** as a supporting AI assistant during the assignment, mainly when I needed a second perspective, help with implementation details, or wanted to validate an approach. I first worked through the requirements and overall structure myself, then used Claude selectively while building the data model, components, logic, and test cases. It was also useful for troubleshooting issues and improving the initial documentation drafts. I reviewed and modified the generated suggestions, made the final implementation decisions, and ran the tests myself to make sure everything worked as expected. The three required documents were also reviewed and finalized by me. Apart from Claude, I did not use any other AI coding or code-review tools.
+
 
 
 ## Example 1 — planning / product-framing interaction (redacted/paraphrased)
